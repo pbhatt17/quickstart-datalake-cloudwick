@@ -9,7 +9,7 @@
     },
     {
         "ParameterKey": "RDSPassword",
-        "ParameterValue": "$[alfred_genpass_8]"
+        "ParameterValue": "$[taskcat_genpass_8]"
     },
     {
         "ParameterKey": "KeyPairName",
@@ -17,6 +17,6 @@
     },
     {
         "ParameterKey": "AvailabilityZones",
-        "ParameterValue": "$[alfred_genaz_2]"
+        "ParameterValue": "$[taskcat_genaz_2]"
     }
 ]
