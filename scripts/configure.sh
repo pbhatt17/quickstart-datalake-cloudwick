@@ -78,7 +78,8 @@ unzip /home/ec2-user/datalake.zip -d /var/www/html; chmod 777 /var/www/html/home
 rm -rf /etc/php.ini; mv /var/www/html/configurations/php.ini /etc/php.ini;chown apache:apache /etc/php.ini; chown -R apache:apache /var/www/html;service httpd restart;
 
 #Zeppelin configuration
-mkdir -p /var/www/html/zeppelin; tar -xf /home/ec2-user/zeppelin-0.7.2-bin-all.tgz -C /var/www/html/zeppelin; chown -R apache /var/www/html/zeppelin;/var/www/html/zeppelin/zeppelin-0.7.2-bin-all/bin/zeppelin-daemon.sh start
+##mkdir -p /var/www/html/zeppelin; tar -xf /home/ec2-user/zeppelin-0.7.2-bin-all.tgz -C /var/www/html/zeppelin; chown -R apache /var/www/html/zeppelin;/var/www/html/zeppelin/zeppelin-0.7.2-bin-all/bin/zeppelin-daemon.sh start
+ mkdir -p /var/www/html/zeppelin;  tar -xf /home/ec2-user/zeppelin-0.8.1-bin-all.tgz -C /var/www/html/zeppelin;  chown -R apache /var/www/html/zeppelin;/var/www/html/zeppelin/zeppelin-0.8.1-bin-all/bin/zeppelin-daemon.sh start
 
 if ! aws s3 cp s3://${BUCKET}/multiAZ/instance.active instance.active --region ${REGION} --quiet --sse AES256
 then
